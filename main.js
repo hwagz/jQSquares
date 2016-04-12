@@ -27,6 +27,10 @@ $(document).ready(function(){
       this.$LB.on('mouseenter',this.grow.bind(this.$LB)).on('mouseleave',this.shrink.bind(this.$LB));
       this.$RT.on('mouseenter',this.grow.bind(this.$RT)).on('mouseleave',this.shrink.bind(this.$RT));
       this.$RB.on('mouseenter',this.grow.bind(this.$RB)).on('mouseleave',this.shrink.bind(this.$RB));
+      this.$LT.on('click',this.colorSwap.bind(this.$LT));
+      this.$LB.on('click',this.colorSwap.bind(this.$LB));
+      this.$RT.on('click',this.colorSwap.bind(this.$RT));
+      this.$RB.on('click',this.colorSwap.bind(this.$RB));
     },
     centerElement: function($el){
       var desiredx = this.$window.width()/2-$el.width()/2;
@@ -70,11 +74,13 @@ $(document).ready(function(){
         left:"+="+squares.growth/2+"px"
       }, squares.growTime);
       this.css({zIndex:1});
+    },
+    colorSwap: function(){
+      var color = this.css("background-color");
+      this.css({backgroundColor: squares.$center.css("background-color")});
+      squares.$center.css({backgroundColor: color});
     }
   };
   squares.init();
-
-  //to add: on click color swap method, uses .css("background-color")
-
 
 }); //end
