@@ -66,7 +66,6 @@ $(document).ready(function(){
       }, squares.growTime);
     },
     shrink: function(){
-      var div = this;
       this.animate({
         width: "-="+squares.growth+"px",
         height:"-="+squares.growth+"px",
