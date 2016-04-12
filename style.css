@@ -1,0 +1,31 @@
+body{
+
+}
+
+.center{
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  background-color: white;
+  z-index: 5;
+}
+
+.quad{
+  position: absolute;
+  z-index: 1;
+}
+
+#LT{
+  background-color: aqua;
+}
+#RT{
+  background-color: red;
+}
+
+#LB{
+  background-color: fuchsia;
+}
+
+#RB{
+  background-color: orange;
+}
